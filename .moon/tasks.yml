@@ -1,0 +1,9 @@
+tasks:
+  format:
+    command: 'prettier --write .'
+  lint:
+    command: 'oxlint --type-aware --fix .'
+  test:
+    command: 'vitest --passWithNoTests .'
+  typecheck:
+    command: 'tsc --noEmit --skipLibCheck'

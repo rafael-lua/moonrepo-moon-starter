@@ -1,0 +1,8 @@
+moon = "1.31.0"
+node = "~22"
+npm = "bundled"
+yarn = "~4"
+
+[settings]
+auto-install = true
+auto-clean = true
