@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.options.json",
+  "compilerOptions": {
+    // See: https://moonrepo.dev/docs/guides/javascript/typescript-project-refs#tsconfigoptionsjson
+    "emitDeclarationOnly": true,
+  }
+}

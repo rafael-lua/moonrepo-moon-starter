@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.modules.json",
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "*.js",
+    "*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/hello"
+    }
+  ],
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/modules/hello-world"
+  }
+}

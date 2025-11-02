@@ -1,4 +1,18 @@
 {
   "name": "moonrepo-sst-starter",
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.10.3",
+  "scripts": {
+    "create:pkg": "mkdir -p packages/$1 && cd packages/$1 && yarn init -y",
+    "create:mdl": "mkdir -p modules/$1 && cd modules/$1 && yarn init -y",
+    "moon": "$(yarn bin moon) --color",
+    "graph": "yarn moon tg"
+  },
+  "workspaces": [
+    "packages/*",
+    "modules/*"
+  ],
+  "devDependencies": {
+    "@moonrepo/cli": "^1.41.6",
+    "typescript": "^5.9.3"
+  }
 }

@@ -6,4 +6,4 @@ tasks:
   test:
     command: 'vitest --passWithNoTests .'
   typecheck:
-    command: 'tsc --noEmit --skipLibCheck'
+    command: 'tsc --noEmit'

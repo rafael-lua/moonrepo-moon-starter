@@ -1,0 +1,23 @@
+$schema: 'https://moonrepo.dev/schemas/toolchain.json'
+
+unstable_javascript:
+  packageManager: 'yarn'
+  dedupeOnLockfileChange: true
+  dependencyVersionFormat: 'workspace-caret'
+  syncProjectWorkspaceDependencies: true
+
+  # Do not infer functionality from `package.json`, as we want to encourage
+  # consumers to embrace moon.
+  inferTasksFromScripts: false
+
+# https://moonrepo.dev/docs/config/workspace#typescript
+typescript:
+  createMissingConfig: true
+  routeOutDirToCache: true
+  syncProjectReferences: true
+
+unstable_node:
+  version: '22'
+
+unstable_yarn:
+  version: '4'

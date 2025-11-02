@@ -1,8 +1,8 @@
 language: 'typescript'
 
 project:
-  name: 'Hello World Module'
-  description: 'A example module.'
+  name: 'Hello Package'
+  description: 'A example package.'
   channel: ''
   owner: ''
   maintainers: []
@@ -14,5 +14,3 @@ tasks:
       - 'src/**/*'
     outputs:
       - 'dist'
-    deps:
-      - '^:build'
