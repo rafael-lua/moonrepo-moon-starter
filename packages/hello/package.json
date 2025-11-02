@@ -2,7 +2,7 @@
   "name": "@packages/hello",
   "packageManager": "yarn@4.10.3",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "files": [
     "dist"
   ],
