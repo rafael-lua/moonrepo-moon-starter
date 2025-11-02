@@ -8,10 +8,12 @@
     "unicorn/filename-case": "off",
     "import/no-unassigned-import": "off",
     "import/no-named-export": "off",
+    "import/prefer-default-export": "allow",
     "eslint/no-magic-numbers": "off",
     "eslint/no-ternary": "off",
     "unicorn/no-empty-file": "warn",
 
+    "typescript/triple-slash-reference": "off",
     "typescript/consistent-type-definitions": ["warn", "type"],
 
     // Disabled until auto-fix support is added
