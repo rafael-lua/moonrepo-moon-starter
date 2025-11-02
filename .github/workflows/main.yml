@@ -1,4 +1,4 @@
-name: Deploy to Netlify
+name: Main CI
 
 on:
   push:
@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   check-all:
-    name: Build and Deploy
+    name: Test
     if: ${{ !startsWith(github.event.head_commit.message, 'release:') }}
     runs-on: ubuntu-latest
 
@@ -22,8 +22,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 📦 Setup proto
-        uses: ./.github/actions/setup-proto
+      - name: 📦 Setup toolchain
+        uses: ./.github/actions/setup-toolchain
 
       - name: Check all
         run: moon check --all
