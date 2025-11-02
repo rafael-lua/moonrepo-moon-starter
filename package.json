@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.10.3",
   "type": "module",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "author": "rafael-lua",
   "scripts": {
