@@ -5,7 +5,8 @@
     "create:pkg": "mkdir -p packages/$1 && cd packages/$1 && yarn init -y",
     "create:mdl": "mkdir -p modules/$1 && cd modules/$1 && yarn init -y",
     "moon": "$(yarn bin moon) --color",
-    "graph": "yarn moon tg"
+    "graph": "yarn moon tg",
+    "postinstall": "yarn moon sync projects"
   },
   "workspaces": [
     "packages/*",
