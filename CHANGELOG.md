@@ -1,5 +1,11 @@
 Changelogs are auto generated from commits using `harmonic-major` action.
 
+## [v0.1.3](https://github.com/rafael-lua/moonrepo-moon-starter/compare/v0.1.2...v0.1.3) (2025.11.2)
+
+### 🐛 Fixes
+
+-   fix: adjust import rules and typescript settings in lint configuration
+
 ## [v0.1.2](https://github.com/rafael-lua/moonrepo-moon-starter/compare/v0.1.1...v0.1.2) (2025.11.2)
 
 ### 🧹 Chores
