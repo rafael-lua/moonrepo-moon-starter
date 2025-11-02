@@ -1,5 +1,5 @@
 {
-  "name": "moonrepo-sst-starter",
+  "name": "moonrepo-moon-starter",
   "packageManager": "yarn@4.10.3",
   "type": "module",
   "private": true,

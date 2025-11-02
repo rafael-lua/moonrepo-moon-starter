@@ -2140,9 +2140,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moonrepo-sst-starter@workspace:.":
+"moonrepo-moon-starter@workspace:.":
   version: 0.0.0-use.local
-  resolution: "moonrepo-sst-starter@workspace:."
+  resolution: "moonrepo-moon-starter@workspace:."
   dependencies:
     "@moonrepo/cli": "npm:^1.41.6"
     "@prettier/plugin-oxc": "npm:^0.0.4"

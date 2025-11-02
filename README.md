@@ -1,4 +1,4 @@
-# moonrepo-sst-starter
+# moonrepo-moon-starter
 
 ## Setup
 
