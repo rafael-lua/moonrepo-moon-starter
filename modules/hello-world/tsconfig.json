@@ -1,11 +1,6 @@
 {
   "extends": "../../tsconfig.modules.json",
-  "include": [
-    "src/**/*",
-    "tests/**/*",
-    "*.js",
-    "*.ts"
-  ],
+  "include": ["src/**/*", "tests/**/*", "*.js", "*.ts"],
   "references": [
     {
       "path": "../../packages/hello"

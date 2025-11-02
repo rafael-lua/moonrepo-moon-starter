@@ -1,0 +1,29 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-all:
+    name: Build and Deploy
+    if: ${{ !startsWith(github.event.head_commit.message, 'release:') }}
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup proto
+        uses: ./.github/actions/setup-proto
+
+      - name: Check all
+        run: moon check --all

@@ -86,6 +86,9 @@ Thumbs.db
 .nuxt
 dist
 
+# Coverage
+/coverage
+
 # TypeScript build output
 *.tsbuildinfo
 

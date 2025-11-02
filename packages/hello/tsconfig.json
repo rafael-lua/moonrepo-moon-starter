@@ -1,11 +1,6 @@
 {
   "extends": "../../tsconfig.packages.json",
-  "include": [
-    "src/**/*",
-    "tests/**/*",
-    "*.js",
-    "*.ts"
-  ],
+  "include": ["src/**/*", "tests/**/*", "*.js", "*.ts"],
   "references": [],
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/packages/hello"

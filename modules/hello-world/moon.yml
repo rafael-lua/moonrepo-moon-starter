@@ -1,18 +1,18 @@
-language: 'typescript'
+language: "typescript"
 
 project:
-  name: 'Hello World Module'
-  description: 'A example module.'
-  channel: ''
-  owner: ''
+  name: "Hello World Module"
+  description: "A example module."
+  channel: ""
+  owner: ""
   maintainers: []
 
 tasks:
   build:
-    command: 'tsdown'
-    inputs: 
-      - 'src/**/*'
+    command: "tsdown"
+    inputs:
+      - "src/**/*"
     outputs:
-      - 'dist'
+      - "dist"
     deps:
-      - '^:build'
+      - "^:build"

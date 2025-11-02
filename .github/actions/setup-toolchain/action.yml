@@ -1,0 +1,14 @@
+name: "Setup toolchain"
+description: "Setup toolchain environment with Node.js and yarn"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup proto
+      uses: "moonrepo/setup-toolchain@v0"
+      with:
+        auto-install: true
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install

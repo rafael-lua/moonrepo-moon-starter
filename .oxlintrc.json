@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "rules": {
+    "no-unused-vars": "warn",
+    "vitest/no-conditional-tests": "error",
+    "oxc/no-accumulating-spread": "warn",
+    "eslint/no-await-in-loop": "warn",
+    "unicorn/filename-case": "off",
+    "import/no-unassigned-import": "off",
+    "import/no-named-export": "off",
+    "eslint/no-magic-numbers": "off",
+    "eslint/no-ternary": "off",
+    "unicorn/no-empty-file": "warn",
+
+    "typescript/consistent-type-definitions": ["warn", "type"],
+
+    // Disabled until auto-fix support is added
+    "sort-keys": "off",
+    "eslint/sort-imports": "off"
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "style": "warn",
+    "perf": "warn"
+  },
+
+  "plugins": [
+    // Defaults
+    "eslint",
+    "typescript",
+    "oxc",
+
+    // Extras
+    "vitest",
+    "unicorn",
+    "import",
+    "promise",
+    "node"
+  ],
+
+  "ignorePatterns": ["test/snapshots/**"]
+}

@@ -1,7 +1,5 @@
-import { hello } from "@packages/hello";
+import { hello } from "@packages/hello"
 
-const fn = () => {
-  hello("World!")
-}
+const fn = () => hello("World!")
 
 fn()

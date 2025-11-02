@@ -1,9 +1,9 @@
-$schema: 'https://moonrepo.dev/schemas/toolchain.json'
+$schema: "https://moonrepo.dev/schemas/toolchain.json"
 
 unstable_javascript:
-  packageManager: 'yarn'
+  packageManager: "yarn"
   dedupeOnLockfileChange: true
-  dependencyVersionFormat: 'workspace-caret'
+  dependencyVersionFormat: "workspace-caret"
   syncProjectWorkspaceDependencies: true
 
   # Do not infer functionality from `package.json`, as we want to encourage
@@ -17,7 +17,7 @@ typescript:
   syncProjectReferences: true
 
 unstable_node:
-  version: '22'
+  version: "22"
 
 unstable_yarn:
-  version: '4'
+  version: "4"

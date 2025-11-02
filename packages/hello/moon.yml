@@ -1,16 +1,16 @@
-language: 'typescript'
+language: "typescript"
 
 project:
-  name: 'Hello Package'
-  description: 'A example package.'
-  channel: ''
-  owner: ''
+  name: "Hello Package"
+  description: "A example package."
+  channel: ""
+  owner: ""
   maintainers: []
 
 tasks:
   build:
-    command: 'tsdown'
-    inputs: 
-      - 'src/**/*'
+    command: "tsdown"
+    inputs:
+      - "src/**/*"
     outputs:
-      - 'dist'
+      - "dist"

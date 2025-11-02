@@ -1,9 +1,104 @@
+$schema: "https://moonrepo.dev/schemas/tasks.json"
+
+implicitDeps:
+  - "^:build"
+
+implicitInputs:
+  - "package.json"
+
+fileGroups:
+  sources:
+    - "src/**/*"
+  tests:
+    - "**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts}"
+  typescript:
+    - "tsconfig.json"
+    - "tsconfig.*.json"
+    - "/tsconfig.json"
+    - "/tsconfig.*.json"
+
 tasks:
   format:
-    command: 'prettier --write .'
+    command: "prettier"
+    args:
+      - "--config"
+      - "@in(1)"
+      - "--ignore-path"
+      - "@in(0)"
+      - "--check"
+      - "."
+    inputs:
+      - "/.prettierignore"
+      - "/.prettierrc.ts"
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "**/*.{md,mdx,yml,yaml,json}"
+
+  formatfix:
+    local: true # `moon check` does not run `local`
+    command: "prettier"
+    args:
+      - "--config"
+      - "@in(1)"
+      - "--ignore-path"
+      - "@in(0)"
+      - "--write"
+      - "."
+    inputs:
+      - "/.prettierignore"
+      - "/.prettierrc.js"
+
   lint:
-    command: 'oxlint --type-aware --fix .'
+    command: "oxlint"
+    args:
+      - "--type-aware"
+      - "."
+    inputs:
+      - "@globs(typescript)"
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "/oxlintrc.json"
+
+  lintfix:
+    local: true # `moon check` does not run `local`
+    command: "oxlint"
+    args:
+      - "--type-aware"
+      - "--fix"
+      - "."
+    inputs:
+      - "/oxlintrc.json"
+
+  testci:
+    command: "vitest"
+    args:
+      - "run"
+      - "--passWithNoTests"
+      - "--coverage"
+      - "."
+    inputs:
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "/vitest.config.ts"
+
   test:
-    command: 'vitest --passWithNoTests .'
+    local: true # `moon check` does not run `local`
+    command: "vitest"
+    args:
+      - "--passWithNoTests"
+      - "--coverage"
+      - "."
+    inputs:
+      - "@globs(sources)"
+      - "@globs(tests)"
+      - "/vitest.config.ts"
+
   typecheck:
-    command: 'tsc --noEmit'
+    command: "tsc"
+    args:
+      - "--noEmit"
+      - "--pretty"
+    inputs:
+      - "@globs(typescript)"
+      - "@globs(sources)"
+      - "@globs(tests)"
